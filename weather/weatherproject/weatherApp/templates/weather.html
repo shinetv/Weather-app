@@ -1,0 +1,39 @@
+{% extends 'base.html' %}
+{% block content %}
+<div class="content_wrapper" id="app">
+	<div v-if="infos.city">
+		<h1 style="text-align: center;">
+			{{ data.city }} Weather
+			<div class="date"></div>
+		</h1>
+<div class="weather_card">
+    <div class="weather_card_img" >
+        <div class="weather_card_state">
+            <span class="material-icons">
+                <img src="https://openweathermap.org/img/wn/{{data.icon}}.png">
+            </span>
+        </div>
+    </div>
+
+    <div class="weather_card_infos">
+        <div class="weather_card_infos_title" style="color: white;">
+            {{ data.city }}<br>
+            {{data.description}}
+            
+        </div>
+        <div class="weather_card_infos_temp">
+            {{ data.celcius_temperature }}°C--{{ data.kelvin_temperature }}°k
+            
+        </div>
+        <div class="bottom">
+            <hr>
+            <div class="weather_card_infos_bottom" style="color: white;">
+              Humidity : {{data.humidity}} -- Pressure:{{data.pressure}}
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+</div>
+</div>
+{% endblock %}

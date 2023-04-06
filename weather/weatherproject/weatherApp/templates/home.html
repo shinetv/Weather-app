@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+{% block content %}
+
+
+<div class="content_wrapper" id="app">
+	<div v-if="infos.city">
+		<h1 style="text-align: center;color: white;">
+			Check Your State/country Weather
+			<div class="date"></div>
+		</h1>
+        <center><form method="get" action="weather">
+            <input class="form-control" placeholder="eg:Lucknow" name="city">
+            <button type="submit" class="btn">Check</button>
+        </form><br><br></center>
+
+        
+
+
+{% endblock %}
